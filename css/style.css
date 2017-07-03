@@ -46,8 +46,8 @@ body {
 }
 
 #sectionOneBoxName {
- font-size: 3em;
- font-weight: 900;
+    font-size: 3em;
+    font-weight: 900;
 }
 
 #sectionOneBoxDesc {
@@ -57,20 +57,57 @@ body {
 
 #sectionOneBoxButton {
     margin-top: 25px;
+    display: block;
     width: 40%;
+    height: 250px;
     text-align: center;
     border: 1px solid #C8C5C0;
-    
     padding-top: 10px;
     padding-bottom: 10px;
-   
+    cursor: pointer;
+    text-decoration: none;
 }
+
+#sectionOneBoxButton :hover {
+    color: #888888;
+    border: 1px solid #888888;
+}
+
 #sectionTwoHome {
-  width: 100%;
+    width: 100%;
     background-color: #25232E;
-    height: 100vh;
     padding-top: 5%;
     padding-left: 17%;
+}
+
+#sectionTwoHomeDescBox {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 20%;
+}
+
+#sectionTwoHomeDescImage {
+    display: block;
+    float: left;
+    height: 200px;
+    width: 250px;
+}
+
+#sectionTwoHomeDescBoxRight {
+    display: block;
+    float: left;
+}
+
+#sectionTwoHomeDescHeader {
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2em;
+}
+
+#sectionTwoHomeDescContent {
+    color: white;
+    font-family: 'Raleway';
+    margin-top: 15px;
 }
 
 #sectionThreeHome {
@@ -84,6 +121,14 @@ body {
 #sectionFourHome {
     width: 100%;
     background-color: #201E29;
+    height: 100vh;
+    padding-top: 5%;
+    padding-left: 17%;
+}
+
+#sectionFiveHome {
+    width: 100%;
+    background-color: #22202B;
     height: 100vh;
     padding-top: 5%;
     padding-left: 17%;
@@ -107,7 +152,7 @@ body {
     height: 100%;
 }
 
-#mainNav>ul>li >a {
+#mainNav>ul>li>a {
     display: block;
     font-family: 'Raleway';
     font-weight: 800;
@@ -117,10 +162,9 @@ body {
     cursor: pointer;
     color: #9D9D9D;
     text-decoration: none;
-    
 }
 
-#mainNav>ul>li> a:hover {
-   color: #7FA844; 
-   border-bottom: 0.15em solid #7FA844;
+#mainNav>ul>li>a:hover {
+    color: #7FA844;
+    border-bottom: 0.15em solid #7FA844;
 }
