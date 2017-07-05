@@ -3,9 +3,9 @@ body {
 }
 
 .sectionHeader {
-    width: 100%;
     height: 5%;
     color: white;
+    padding-left: 17%;
 }
 
 .sectionHeaderBlock {
@@ -29,20 +29,18 @@ body {
 
 #sectionOneHome {
     width: 100%;
-    /* background-image: url('../img/bg.jpg');
-    background-size: contain; */
-    background-color: #282631;
     height: 100vh;
 }
 
 #sectionOneBox {
     position: absolute;
-    margin-top: 30%;
-    margin-left: 17%;
+    top: 47%;
+    left: 19%;
     width: 25%;
     height: 300px;
     color: #C8C5C0;
     font-family: 'Raleway';
+    z-index: 1;
 }
 
 #sectionOneBoxName {
@@ -69,7 +67,7 @@ body {
 }
 
 #sectionOneBoxButton:hover {
-    animation-name:sectionOneBoxButtonColorTransition;
+    animation-name: sectionOneBoxButtonColorTransition;
     animation-duration: 0.2s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -77,17 +75,20 @@ body {
 }
 
 @keyframes sectionOneBoxButtonColorTransition {
-    from { color: #C8C5C0;
-    border: 1px solid #C8C5C0;}
-    to { color: #888888;
-    border: 1px solid #888888;}
+    from {
+        color: #C8C5C0;
+        border: 1px solid #C8C5C0;
+    }
+    to {
+        color: #888888;
+        border: 1px solid #888888;
+    }
 }
 
 #sectionTwoHome {
     width: 100%;
     background-color: #25232E;
     padding-top: 5%;
-    padding-left: 17%;
 }
 
 #sectionTwoHomeDescBox {
@@ -123,9 +124,7 @@ body {
 #sectionThreeHome {
     width: 100%;
     background-color: #22202B;
-    height: 100vh;
     padding-top: 5%;
-    padding-left: 17%;
 }
 
 #sectionFourHome {
@@ -133,7 +132,6 @@ body {
     background-color: #201E29;
     height: 100vh;
     padding-top: 5%;
-    padding-left: 17%;
 }
 
 #sectionFiveHome {
@@ -141,10 +139,10 @@ body {
     background-color: #22202B;
     height: 100vh;
     padding-top: 5%;
-    padding-left: 17%;
 }
 
 #mainNav {
+    z-index: 1;
     position: absolute;
     margin-top: 10px;
     width: 100%;
@@ -175,6 +173,101 @@ body {
 }
 
 #mainNav>ul>li>a:hover {
-    color: #7FA844;
-    border-bottom: 0.15em solid #7FA844;
+    color: rgb(127, 168, 68);
+}
+
+#mainNav>ul>li>a:hover::after {
+    content: ' ';
+    display: block;
+    position: relative;
+    background-color: rgb(127, 168, 68);
+    margin-top: 5px;
+    height: 0.15em;
+    width: 0%;
+    animation-name: afterNavBar;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes afterNavBar {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+#sectionThreeHomeSkillBox {
+    margin-left: 30%;
+    margin-top: 90px;
+    padding-bottom: 5%;
+}
+
+#skillOne {
+    display: block;
+    float: left;
+    background-color: #11DAA4;
+    width: 150px;
+    height: 150px;
+}
+
+#skillTwo {
+    display: block;
+    float: left;
+    background-color: #DB7012;
+    width: 150px;
+    height: 150px;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#skillThree {
+    display: block;
+    float: left;
+    background-color: #CEDB11;
+    background-image: url(../img/math.png);
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+}
+
+#skillThreeImage {
+    width: 150px;
+    height: 150px;
+}
+
+.fa.fa-code {
+    color: #22202B;
+    font-size: 6em !important;
+    text-align: center;
+    margin-top: 17%;
+    margin-left: 15%;
+}
+
+.fa.fa-database {
+    color: #22202B;
+    font-size: 6em !important;
+    text-align: center;
+    margin-top: 17%;
+    margin-left: 23%;
+}
+
+#video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../vid/snapshots/love-coding.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
 }

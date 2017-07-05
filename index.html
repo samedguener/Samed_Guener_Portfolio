@@ -4,13 +4,10 @@
 <head>
     <title> Samed Güner | Portfolio </title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-
     <link rel="stylesheet" href="css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/portfolio.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -22,6 +19,12 @@
         </ul>
     </nav>
     <div id="sectionOneHome">
+        <div id="video">
+            <video autoplay loop id="video">
+            <source src="vid/mp4/love-coding.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="vid/webm/love-coding.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        </div>
         <div id="sectionOneBox">
             <div id="sectionOneBoxName">SAMED GÜNER</div>
             <div id="sectionOneBoxDesc">COMPUTERSCIENCE &middot; DATASCIENCE &middot; MATHEMATICS</div>
@@ -49,10 +52,12 @@
             <div class="sectionHeaderBlock"> </div>
             <div class="sectionHeaderText">SKILL</div>
         </div>
-        <svg fill="#FFFFFF" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0V0z" fill="#11DAA4"/>
-    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-</svg>
+        <div id="sectionThreeHomeSkillBox">
+            <div id="skillOne"> <i class="fa fa-code" aria-hidden="true"></i> </div>
+            <div id="skillTwo"><i class="fa fa-database" aria-hidden="true"></i></div>
+            <div id="skillThree"></div>
+            <div style="clear: both;"></div>
+        </div>
     </div>
     <div id="sectionFourHome">
         <div class="sectionHeader">
@@ -66,6 +71,10 @@
             <div class="sectionHeaderText">CONTACT</div>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="https://use.fontawesome.com/3e4e05c660.js"></script>
 </body>
 
 </html>
