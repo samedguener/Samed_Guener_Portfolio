@@ -94,31 +94,38 @@ body {
 #sectionTwoHomeDescBox {
     padding-top: 90px;
     padding-bottom: 90px;
-    padding-left: 20%;
 }
 
 #sectionTwoHomeDescImage {
     display: block;
     float: left;
     height: 200px;
-    width: 250px;
+    width: 300px;
+    margin-left: 30%;
+    margin-right: 5%;
 }
 
+#portfolioImage {
+width: 100%;
+}
 #sectionTwoHomeDescBoxRight {
     display: block;
     float: left;
+    width: 25%;
 }
 
 #sectionTwoHomeDescHeader {
     color: white;
     font-family: 'Raleway';
     font-size: 2em;
+        width: 100%;
 }
 
 #sectionTwoHomeDescContent {
     color: white;
     font-family: 'Raleway';
     margin-top: 15px;
+       width: 100%;
 }
 
 #sectionThreeHome {
@@ -144,14 +151,15 @@ body {
 #mainNav {
     z-index: 1;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 25px;
     width: 100%;
 }
 
 #mainNav>ul {
-    margin-left: 60%;
+    margin-left: 54%;
     width: auto;
     height: 24px;
+    float: left;
 }
 
 #mainNav>ul>li {
@@ -270,4 +278,17 @@ body {
     background: url('../vid/snapshots/love-coding.jpg') no-repeat;
     background-size: cover;
     transition: 1s opacity;
+}
+
+#navBarLogo{
+    height: 100%;
+    font-family: Montserrat;
+    font-size: 3em;
+    color :#7FA844;
+    margin-left: 12%;
+    float:left;
+}
+
+#navBarLogo::first-letter{
+  color :#9D9D9D; 
 }
