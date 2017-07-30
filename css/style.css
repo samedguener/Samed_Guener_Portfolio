@@ -36,7 +36,6 @@ body {
     position: absolute;
     top: 47%;
     left: 19%;
-    width: 25%;
     height: 300px;
     color: #C8C5C0;
     font-family: 'Raleway';
@@ -94,14 +93,15 @@ body {
 #sectionTwoHomeDescBox {
     padding-top: 90px;
     padding-bottom: 90px;
+    margin-left: 30%;
 }
 
 #sectionTwoHomeDescImage {
     display: block;
     float: left;
-    height: 200px;
+    height: 400px;
     width: 300px;
-    margin-left: 30%;
+    margin-bottom: 10%; 
     margin-right: 5%;
 }
 
@@ -111,7 +111,7 @@ width: 100%;
 #sectionTwoHomeDescBoxRight {
     display: block;
     float: left;
-    width: 25%;
+       width: 420px;
 }
 
 #sectionTwoHomeDescHeader {
@@ -222,6 +222,8 @@ width: 100%;
     background-color: #11DAA4;
     width: 150px;
     height: 150px;
+    margin-right: 7%;
+    margin-bottom: 5%;
 }
 
 #skillTwo {
@@ -230,8 +232,8 @@ width: 100%;
     background-color: #DB7012;
     width: 150px;
     height: 150px;
-    margin-left: 7%;
     margin-right: 7%;
+    margin-bottom: 5%;
 }
 
 #skillThree {
@@ -242,6 +244,7 @@ width: 100%;
     background-size: 150px 150px;
     width: 150px;
     height: 150px;
+    margin-bottom: 5%;
 }
 
 #skillThreeImage {
@@ -275,7 +278,7 @@ width: 100%;
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background: url('../vid/snapshots/love-coding.jpg') no-repeat;
+    background: url('../vid/coding.jpg') no-repeat;
     background-size: cover;
     transition: 1s opacity;
 }
@@ -291,4 +294,31 @@ width: 100%;
 
 #navBarLogo::first-letter{
   color :#9D9D9D; 
+}
+
+
+#sectionTwoHomeDescImage {
+    display: block;
+    float: left;
+    height: 400px;
+    width: 300px;
+    margin-bottom: 10%;
+    margin-right: 5%;
+}
+
+@media (max-width: 500px) {
+   #sectionTwoHomeDescImage {
+        display: block;
+    float: left;
+    height: 344px;
+    width: 209px;
+    margin-bottom: 10%;
+    margin-right: 5%;
+}
+
+#sectionTwoHomeDescBoxRight {
+    display: block;
+    float: left;
+    width: 220px;
+}
 }
