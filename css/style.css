@@ -5,12 +5,13 @@ body {
 .sectionHeader {
     height: 5%;
     color: white;
-    padding-left: 17%;
+    margin-left: 17%;
+    margin-bottom: 80px;
 }
 
 .sectionHeaderBlock {
-    width: 4.25%;
-    height: 53%;
+    width: 30px;
+    height: 25px;
     background-color: white;
     display: block;
     float: left;
@@ -18,7 +19,7 @@ body {
 }
 
 .sectionHeaderText {
-    margin-left: 2%;
+    margin-left: 0.5em;
     font-family: 'Raleway';
     display: block;
     float: left;
@@ -86,28 +87,30 @@ body {
 }
 
 #sectionTwoHome {
+    position: relative;
     width: 100%;
     background-color: #25232E;
     padding-top: 5%;
+    padding-bottom: 80px;
 }
 
 #sectionTwoHomeDescBox {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    position: relative;
+    padding-left: 17%;
 }
 
 #sectionTwoHomeDescImage {
     display: block;
     float: left;
-    height: 200px;
+    height: 400px;
     width: 300px;
-    margin-left: 30%;
     margin-right: 5%;
 }
 
 #portfolioImage {
-width: 100%;
+    width: 100%;
 }
+
 #sectionTwoHomeDescBoxRight {
     display: block;
     float: left;
@@ -118,20 +121,61 @@ width: 100%;
     color: white;
     font-family: 'Raleway';
     font-size: 2em;
-        width: 100%;
+    width: 100%;
 }
 
 #sectionTwoHomeDescContent {
     color: white;
     font-family: 'Raleway';
     margin-top: 15px;
-       width: 100%;
+    width: 100%;
 }
 
 #sectionThreeHome {
     width: 100%;
     background-color: #22202B;
     padding-top: 5%;
+    padding-bottom: 80px;
+}
+
+#skillOne {
+    display: block;
+    float: left;
+    background-color: #11DAA4;
+    width: 150px;
+    height: 150px;
+    margin-right: 7%;
+    margin-top: 15px;
+}
+
+#skillTwo {
+    display: block;
+    float: left;
+    background-color: #DB7012;
+    width: 150px;
+    height: 150px;
+    margin-right: 7%;
+    margin-top: 15px;
+}
+
+#skillThree {
+    display: block;
+    float: left;
+    background-color: #CEDB11;
+    background-image: url(../img/math.png);
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+}
+
+#sectionThreeHomeSkillBox {
+    padding-left: 17%;
+}
+
+#skillThreeImage {
+    width: 150px;
+    height: 150px;
 }
 
 #sectionFourHome {
@@ -139,6 +183,7 @@ width: 100%;
     background-color: #201E29;
     height: 100vh;
     padding-top: 5%;
+    padding-bottom: 80px;
 }
 
 #sectionFiveHome {
@@ -146,6 +191,7 @@ width: 100%;
     background-color: #22202B;
     height: 100vh;
     padding-top: 5%;
+    padding-bottom: 80px;
 }
 
 #mainNav {
@@ -210,45 +256,6 @@ width: 100%;
     }
 }
 
-#sectionThreeHomeSkillBox {
-    margin-left: 30%;
-    margin-top: 90px;
-    padding-bottom: 5%;
-}
-
-#skillOne {
-    display: block;
-    float: left;
-    background-color: #11DAA4;
-    width: 150px;
-    height: 150px;
-}
-
-#skillTwo {
-    display: block;
-    float: left;
-    background-color: #DB7012;
-    width: 150px;
-    height: 150px;
-    margin-left: 7%;
-    margin-right: 7%;
-}
-
-#skillThree {
-    display: block;
-    float: left;
-    background-color: #CEDB11;
-    background-image: url(../img/math.png);
-    background-size: 150px 150px;
-    width: 150px;
-    height: 150px;
-}
-
-#skillThreeImage {
-    width: 150px;
-    height: 150px;
-}
-
 .fa.fa-code {
     color: #22202B;
     font-size: 6em !important;
@@ -280,15 +287,15 @@ width: 100%;
     transition: 1s opacity;
 }
 
-#navBarLogo{
+#navBarLogo {
     height: 100%;
     font-family: Montserrat;
     font-size: 3em;
-    color :#7FA844;
+    color: #7FA844;
     margin-left: 12%;
-    float:left;
+    float: left;
 }
 
-#navBarLogo::first-letter{
-  color :#9D9D9D; 
+#navBarLogo::first-letter {
+    color: #9D9D9D;
 }
