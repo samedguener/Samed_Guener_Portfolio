@@ -5,13 +5,12 @@ body {
 .sectionHeader {
     height: 5%;
     color: white;
-    margin-left: 17%;
-    margin-bottom: 80px;
+    padding-left: 17%;
 }
 
 .sectionHeaderBlock {
-    width: 30px;
-    height: 25px;
+    width: 4.25%;
+    height: 53%;
     background-color: white;
     display: block;
     float: left;
@@ -19,7 +18,7 @@ body {
 }
 
 .sectionHeaderText {
-    margin-left: 0.5em;
+    margin-left: 2%;
     font-family: 'Raleway';
     display: block;
     float: left;
@@ -37,7 +36,6 @@ body {
     position: absolute;
     top: 47%;
     left: 19%;
-    width: 25%;
     height: 300px;
     color: #C8C5C0;
     font-family: 'Raleway';
@@ -87,16 +85,15 @@ body {
 }
 
 #sectionTwoHome {
-    position: relative;
     width: 100%;
     background-color: #25232E;
     padding-top: 5%;
-    padding-bottom: 80px;
 }
 
 #sectionTwoHomeDescBox {
-    position: relative;
-    padding-left: 17%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-left: 30%;
 }
 
 #sectionTwoHomeDescImage {
@@ -104,78 +101,37 @@ body {
     float: left;
     height: 400px;
     width: 300px;
+    margin-bottom: 10%; 
     margin-right: 5%;
 }
 
 #portfolioImage {
-    width: 100%;
+width: 100%;
 }
-
 #sectionTwoHomeDescBoxRight {
     display: block;
     float: left;
-    width: 25%;
+       width: 420px;
 }
 
 #sectionTwoHomeDescHeader {
     color: white;
     font-family: 'Raleway';
     font-size: 2em;
-    width: 100%;
+        width: 100%;
 }
 
 #sectionTwoHomeDescContent {
     color: white;
     font-family: 'Raleway';
     margin-top: 15px;
-    width: 100%;
+       width: 100%;
 }
 
 #sectionThreeHome {
     width: 100%;
     background-color: #22202B;
     padding-top: 5%;
-    padding-bottom: 80px;
-}
-
-#skillOne {
-    display: block;
-    float: left;
-    background-color: #11DAA4;
-    width: 150px;
-    height: 150px;
-    margin-right: 7%;
-    margin-top: 15px;
-}
-
-#skillTwo {
-    display: block;
-    float: left;
-    background-color: #DB7012;
-    width: 150px;
-    height: 150px;
-    margin-right: 7%;
-    margin-top: 15px;
-}
-
-#skillThree {
-    display: block;
-    float: left;
-    background-color: #CEDB11;
-    background-image: url(../img/math.png);
-    background-size: 150px 150px;
-    width: 150px;
-    height: 150px;
-    margin-top: 15px;
-}
-
-#sectionThreeHomeSkillBox {
-    padding-left: 17%;
-}
-
-#skillThreeImage {
-    width: 150px;
-    height: 150px;
 }
 
 #sectionFourHome {
@@ -183,7 +139,6 @@ body {
     background-color: #201E29;
     height: 100vh;
     padding-top: 5%;
-    padding-bottom: 80px;
 }
 
 #sectionFiveHome {
@@ -191,7 +146,6 @@ body {
     background-color: #22202B;
     height: 100vh;
     padding-top: 5%;
-    padding-bottom: 80px;
 }
 
 #mainNav {
@@ -256,6 +210,48 @@ body {
     }
 }
 
+#sectionThreeHomeSkillBox {
+    margin-left: 30%;
+    margin-top: 90px;
+    padding-bottom: 5%;
+}
+
+#skillOne {
+    display: block;
+    float: left;
+    background-color: #11DAA4;
+    width: 150px;
+    height: 150px;
+    margin-right: 7%;
+    margin-bottom: 5%;
+}
+
+#skillTwo {
+    display: block;
+    float: left;
+    background-color: #DB7012;
+    width: 150px;
+    height: 150px;
+    margin-right: 7%;
+    margin-bottom: 5%;
+}
+
+#skillThree {
+    display: block;
+    float: left;
+    background-color: #CEDB11;
+    background-image: url(../img/math.png);
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+#skillThreeImage {
+    width: 150px;
+    height: 150px;
+}
+
 .fa.fa-code {
     color: #22202B;
     font-size: 6em !important;
@@ -282,20 +278,47 @@ body {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background: url('../vid/snapshots/love-coding.jpg') no-repeat;
+    background: url('../vid/coding.jpg') no-repeat;
     background-size: cover;
     transition: 1s opacity;
 }
 
-#navBarLogo {
+#navBarLogo{
     height: 100%;
     font-family: Montserrat;
     font-size: 3em;
-    color: #7FA844;
+    color :#7FA844;
     margin-left: 12%;
-    float: left;
+    float:left;
 }
 
-#navBarLogo::first-letter {
-    color: #9D9D9D;
+#navBarLogo::first-letter{
+  color :#9D9D9D; 
+}
+
+
+#sectionTwoHomeDescImage {
+    display: block;
+    float: left;
+    height: 400px;
+    width: 300px;
+    margin-bottom: 10%;
+    margin-right: 5%;
+}
+
+@media (max-width: 500px) {
+   #sectionTwoHomeDescImage {
+        display: block;
+    float: left;
+    height: 344px;
+    width: 209px;
+    margin-bottom: 10%;
+    margin-right: 5%;
+}
+
+#sectionTwoHomeDescBoxRight {
+    display: block;
+    float: left;
+    width: 220px;
+}
 }
