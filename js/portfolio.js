@@ -27,4 +27,15 @@ function menu() {
     } else {
         x.className = "mainNav";
     }
+
+    var y = document.getElementById("icon");
+    if(y.className === "icon"){
+        y.className += " clicked";
+        y.textContent = "X";
+        y.style.fontFamily = "'Montserrat'";
+    } else {
+        y.className = "icon";
+        y.textContent = "☰";
+        
+    }
 }

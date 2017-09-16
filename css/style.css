@@ -9,8 +9,8 @@ body {
 }
 
 .sectionHeaderBlock {
-    width: 4.25%;
-    height: 56.5%;
+    width: 40px;
+    height: 24px;
     background-color: white;
     display: block;
     float: left;
@@ -245,6 +245,18 @@ width: 100%;
     width: 150px;
     height: 150px;
     margin-bottom: 5%;
+    margin-right: 7%;
+}
+
+#skillFour {
+    display: block;
+    float: left;
+    background-color: #9E9E9E;
+    background-image: url(../img/weight.png);
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5%;
 }
 
 #skillThreeImage {
@@ -306,7 +318,7 @@ width: 100%;
     margin-right: 5%;
 }
 
-#icon {
+.icon {
     color: #7FA844;
     font-size: 3em;
     display: none;
@@ -315,8 +327,9 @@ width: 100%;
 
 @media (max-width: 500px) {
 
-#icon {
-    color: #7FA844;
+
+.icon {
+   color: #7FA844;
     display: block;
     float: right;
     cursor:pointer;
@@ -344,7 +357,6 @@ width: 100%;
 
 .mainNav.responsive ul {
     display: block;
-   
     height: 100%;
 }
 .mainNav.responsive>ul>li>a {
