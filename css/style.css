@@ -10,7 +10,7 @@ body {
 
 .sectionHeaderBlock {
     width: 4.25%;
-    height: 53%;
+    height: 56.5%;
     background-color: white;
     display: block;
     float: left;
@@ -148,27 +148,27 @@ width: 100%;
     padding-top: 5%;
 }
 
-#mainNav {
+.mainNav {
     z-index: 1;
     position: absolute;
     margin-top: 25px;
     width: 100%;
 }
 
-#mainNav>ul {
+.mainNav>ul {
     margin-left: 54%;
     width: auto;
     height: 24px;
     float: left;
 }
 
-#mainNav>ul>li {
+.mainNav>ul>li {
     display: block;
     float: left;
     height: 100%;
 }
 
-#mainNav>ul>li>a {
+.mainNav>ul>li>a {
     display: block;
     font-family: 'Raleway';
     font-weight: 800;
@@ -180,11 +180,11 @@ width: 100%;
     text-decoration: none;
 }
 
-#mainNav>ul>li>a:hover {
+.mainNav>ul>li>a:hover {
     color: rgb(127, 168, 68);
 }
 
-#mainNav>ul>li>a:hover::after {
+.mainNav>ul>li>a:hover::after {
     content: ' ';
     display: block;
     position: relative;
@@ -306,8 +306,23 @@ width: 100%;
     margin-right: 5%;
 }
 
+#icon {
+    color: #7FA844;
+    font-size: 3em;
+    display: none;
+    margin-right: 5%;
+}
+
 @media (max-width: 500px) {
-   #sectionTwoHomeDescImage {
+
+#icon {
+    color: #7FA844;
+    display: block;
+    float: right;
+    cursor:pointer;
+}
+
+#sectionTwoHomeDescImage {
         display: block;
     float: left;
     height: 344px;
@@ -320,5 +335,20 @@ width: 100%;
     display: block;
     float: left;
     width: 220px;
+}
+
+.mainNav ul 
+{
+    display: none;
+}
+
+.mainNav.responsive ul {
+    display: block;
+   
+    height: 100%;
+}
+.mainNav.responsive>ul>li>a {
+     margin-top: 5px; 
+     cursor:pointer;
 }
 }
