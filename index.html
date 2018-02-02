@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
 
     <title> Samed Güner | Portfolio </title>
     <link rel="stylesheet" href="css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <script src="js/portfolio.js"></script>
+    <script src="js/portfolio.js"></script>
 </head>
 
 <body>
     <nav id="mainNav" class="mainNav">
-        <div id="navBarLogo" >SG</div>
+        <div id="navBarLogo">SG</div>
         <a id="icon" class="icon" onclick="menu()">&#9776;</a>
         <ul>
-            <li><a id="navBtnAbout" href="#sectionTwoHome">ABOUT</a></li>
-            <li><a id="navBtnSkill" href="#sectionThreeHome">SKILL</a></li>
-            <li><a id="navBtnContact" href="#sectionFourHome">CONTACT</a></li>
-           
+            <li>
+                <a id="navBtnAbout" href="#sectionTwoHome">ABOUT</a>
+            </li>
+            <li>
+                <a id="navBtnSkill" href="#sectionThreeHome">SKILL</a>
+            </li>
+            <li>
+                <a id="navBtnContact" href="#sectionFourHome">CONTACT</a>
+            </li>
+
         </ul>
-         
-         <div style="clear: both;"></div>
+
+        <div style="clear: both;"></div>
     </nav>
-        
+
     <div id="sectionOneHome">
         <div id="video">
             <video autoplay loop id="video">
-            <source src="vid/coding.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="vid/coding.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
+                <source src="vid/coding.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="vid/coding.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
         </div>
         <div id="sectionOneBox">
             <div id="sectionOneBoxName">SAMED GÜNER</div>
-            <div id="sectionOneBoxDesc">COMPUTERSCIENCE &middot; DATASCIENCE &middot; MATHEMATICS &middot; GYM</div>
+            <div id="sectionOneBoxDesc">SOFTWARE DEVELOPMENT &middot; DATASCIENCE &middot; MATHEMATICS</div>
             <a href="#sectionTwoHome" id="sectionOneBoxButton">MORE</a>
         </div>
     </div>
@@ -48,13 +54,21 @@
         </div>
 
         <div id="sectionTwoHomeDescBox">
-            <div id="sectionTwoHomeDescImage"><img id="portfolioImage" src="img/samed_guener.jpg" alt="Samed Güner"/></div>
+            <div id="sectionTwoHomeDescImage">
+                <img id="portfolioImage" src="img/samed_guener.jpg" alt="Samed Güner" />
+            </div>
             <div id="sectionTwoHomeDescBoxRight">
-                <div id="sectionTwoHomeDescHeader">Hello, I am <span style="color:#7FA844;">Samed Güner</span><br> Student of Computer Science</div>
-                <div id="sectionTwoHomeDescContent">I'm 20 years old and an avid fan of programming, technology and all kind of mathematical and physical topics.         
-                   <p>Maybe you have recognised that I'm not a German guy. Accurately, I was born in Germany, but my roots are Turkish.</p>  
-                   Since 2016, I'm working at SAP in Walldorf and studying Applied Computer Science at Baden-Wuerttemberg Cooperative State University in Karlsruhe.
-            <p>In my spare time, I program a lot more on many private projects, read books, go to the gym and meet up with friends.</p></div>
+                <div id="sectionTwoHomeDescHeader">Hello, I am
+                    <span style="color:#7FA844;">Samed Güner</span>
+                    <br> Student of Computer Science</div>
+                <div id="sectionTwoHomeDescContent">I'm 20 years old and an avid fan of programming, technology and all kind of mathematical and physical topics.
+                    <p>Maybe you have recognised that I'm not a German guy. Accurately, I was born in Germany, but my roots
+                        are Turkish.</p>
+                    Since 2016, I'm working at SAP in Walldorf and studying Applied Computer Science at Baden-Wuerttemberg Cooperative State
+                    University in Karlsruhe.
+                    <p>In my spare time, I program a lot more on many private projects, read books, go to the gym and meet up
+                        with friends.</p>
+                </div>
             </div>
             <div style="clear: both;"></div>
         </div>
@@ -63,31 +77,78 @@
     <div id="sectionThreeHome">
         <div class="sectionHeader">
             <div class="sectionHeaderBlock"> </div>
-            <div class="sectionHeaderText">SKILL</div>
+            <div class="sectionHeaderText">SKILLS</div>
         </div>
         <div id="sectionThreeHomeSkillBox">
-            <div id="skillOne"> <i class="fa fa-code" aria-hidden="true"></i> </div>
-            <div id="skillTwo"><i class="fa fa-database" aria-hidden="true"></i></div>
-            <div id="skillThree"></div>
-            <div id="skillFour"></div>
+            <div class="skillBox">
+                <div id="skillOne">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                </div>
+                <div class="skillDesc">CODING</div>
+            </div>
+            <div class="skillBox">
+                <div id="skillTwo">
+                    <i class="fa fa-database" aria-hidden="true"></i>
+                </div>
+                <div class="skillDesc">DATASCIENCE</div>
+            </div>
+            <div class="skillBox">
+                <div id="skillThree"></div>
+                <div class="skillDesc">MATHEMATICS</div>
+            </div>
             <div style="clear: both;"></div>
+
         </div>
     </div>
     <div id="sectionFourHome">
         <div class="sectionHeader">
             <div class="sectionHeaderBlock"></div>
-            <div class="sectionHeaderText">RESUME </div>
+            <div class="sectionHeaderText">RESUME</div>
         </div>
-    </div>
-    <div id="sectionFiveHome">
-        <div class="sectionHeader">
-            <div class="sectionHeaderBlock"></div>
-            <div class="sectionHeaderText">CONTACT</div>
+        <div id="sectionFourResumeBox">
+            <div id="resumeLeftSide">
+                <div class="resumeLeftSideEntry">
+                    <div class="resumeEntryTitleLeft">Max-Eyth School</div>
+                    <div class="resumeEntryDescLeft">August 2013 - July 2016
+                        <br>
+                        <div style="margin-top:10px; color:#7FA844;"> Focus on Computer Science</div>
+                    </div>
+                </div>
+                <div class="resumeLeftSideEntry">
+                    <div class="resumeEntryTitleLeft">Baden-Wuerttemberg Cooperative State University</div>
+                    <div class="resumeEntryDescLeft">September 2016 - today
+                        <br>
+                        <div style="margin-top:10px; color:#7FA844;"> Bachelor Degree on Applied Computer Science</div>
+                    </div>
+                </div>
+            </div>
+            <div id="resumeMiddleBar"></div>
+            <div id="resumeRightSide">
+                <div class="resumeRightSideEntry">
+                    <div class="resumeEntryTitleRight"> G&uuml;ner Elektronik </div>
+                    <div class="resumeEntryDescRight">2011 - August 2016
+                        <br>
+                        <div style="margin-top:10px; color:#7FA844;"> Focus on Service, Repair and Software of Electronics</div>
+                    </div>
+                </div>
+                <div class="resumeRightSideEntry">
+                    <div class="resumeEntryTitleRight">SAP SE</div>
+                    <div class="resumeEntryDescRight">September 2016 - today
+                        <br>
+                        <div style="margin-top:10px; color:#7FA844;"> Focus on Enterprise Software Development</div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
         </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/3e4e05c660.js"></script>
+        <div id="sectionFiveHome">
+            <div class="sectionHeader">
+                <div class="sectionHeaderBlock"></div>
+                <div class="sectionHeaderText">CONTACT</div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/3e4e05c660.js"></script>
 </body>
 
 </html>
