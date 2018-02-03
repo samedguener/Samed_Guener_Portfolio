@@ -8,10 +8,6 @@
 
     <title> Samed Güner | Portfolio </title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="js/portfolio.js"></script>
 </head>
 
 <body>
@@ -20,13 +16,16 @@
         <a id="icon" class="icon" onclick="menu()">&#9776;</a>
         <ul>
             <li>
-                <a id="navBtnAbout" href="#sectionTwoHome">ABOUT</a>
+                <a id="navBtnAbout" href="#about">ABOUT</a>
             </li>
             <li>
-                <a id="navBtnSkill" href="#sectionThreeHome">SKILL</a>
+                <a id="navBtnSkill" href="#skill">SKILL</a>
             </li>
             <li>
-                <a id="navBtnContact" href="#sectionFourHome">CONTACT</a>
+                <a id="navBtnResume" href="#resume">RESUME</a>
+            </li>
+            <li>
+                <a id="navBtnContact" href="#contact">CONTACT</a>
             </li>
 
         </ul>
@@ -34,7 +33,7 @@
         <div style="clear: both;"></div>
     </nav>
 
-    <div id="sectionOneHome">
+    <div id="home">
         <div id="video">
             <video autoplay loop id="video">
                 <source src="vid/coding.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -47,7 +46,7 @@
             <a href="#sectionTwoHome" id="sectionOneBoxButton">MORE</a>
         </div>
     </div>
-    <div id="sectionTwoHome">
+    <div id="about">
         <div class="sectionHeader">
             <div class="sectionHeaderBlock"></div>
             <div class="sectionHeaderText"> ABOUT </div>
@@ -74,7 +73,7 @@
         </div>
 
     </div>
-    <div id="sectionThreeHome">
+    <div id="skill">
         <div class="sectionHeader">
             <div class="sectionHeaderBlock"> </div>
             <div class="sectionHeaderText">SKILLS</div>
@@ -100,7 +99,7 @@
 
         </div>
     </div>
-    <div id="sectionFourHome">
+    <div id="resume">
         <div class="sectionHeader">
             <div class="sectionHeaderBlock"></div>
             <div class="sectionHeaderText">RESUME</div>
@@ -141,13 +140,54 @@
             </div>
             <div style="clear: both;"></div>
         </div>
-        <div id="sectionFiveHome">
-            <div class="sectionHeader">
+        <div id="contact">
+            <div class="sectionHeader" style="margin-bottom:40px;">
                 <div class="sectionHeaderBlock"></div>
                 <div class="sectionHeaderText">CONTACT</div>
             </div>
+            <div class="sectionHeader">
+                <div class="sectionHeaderText">PLATFORMS</div>
+            </div>
+            <div id="contactBox">
+                <a href="https://plus.google.com/u/0/109101029677109763218">
+                    <img id="contactEntryGooglePlus" src="/img/google_plus.png"></img>
+                </a>
+                <a href="https://github.com/doktorgibson">
+                    <img id="contactEntryGithub" src="/img/GitHub_Logo_White.png"></img>
+                </a>
+                <a href="https://www.instagram.com/samed_guener/">
+                    <img id="contactEntryInstagram" src="/img/instagram.png"></img>
+                </a>
+            </div>
+            <div class="sectionHeader">
+                <div class="sectionHeaderText">EMAIL</div>
+            </div>
+            <div id="contactBoxEmail">
+                <form method="post" action="process.php">
+                    <label class="contactInputName" for="name">Name:
+                        <span class="contactInputRequired">*</span>
+                    </label>
+                    <input type="text" class="contactInput" id="name" name="name" value="" placeholder="Your Name" required="required" autofocus="autofocus"
+                    />
+                    <br>
+                    <label for="email" class="contactInputName">Email Address:
+                        <span class="contactInputRequired">*</span>
+                    </label>
+                    <input class="contactInput" type="email" id="email" name="email" value="" placeholder="youremail@address.com" required="required"
+                    />
+                    <br>
+                    <label for="message" class="contactInputName">Message:
+                        <span class="contactInputRequired">*</span>
+                    </label>
+                    <textarea class="contactInput" id="contactMessage" name="message" placeholder="Your message .." required="required"></textarea>
+                    <br>
+                    <input type="submit" value="SEND" id="contactInputButton" />
+                </form>
+            </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src=""></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/portfolio.js"></script>
         <script src="https://use.fontawesome.com/3e4e05c660.js"></script>
 </body>
 

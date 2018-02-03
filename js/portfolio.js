@@ -1,24 +1,51 @@
+$(document).ready(function () {
 
-$(document).ready(function(){
+    $("#navBtnAbout").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#about").offset().top
+        }, 'slow');
+    });
+    $("#navBtnResume").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#resume").offset().top
+        }, 'slow');
+    });
 
-$("#navBtnAbout").click(function(){
-    $("html,body").animate( {scrollTop: $("#sectionTwoHome").offset().top }, 'slow'); 
+
+    $("#navBtnSkill").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#skill").offset().top
+        }, 'slow');
+    });
+
+    $("#navBtnContact").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#contact").offset().top
+        }, 'slow');
+    });
+
+    $("#sectionOneBoxButton").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#about").offset().top
+        }, 'slow');
+    });
+
+
 });
 
-$("#navBtnSkill").click(function(){
-     $("html,body").animate( {scrollTop: $("#sectionThreeHome").offset().top }, 'slow'); 
-});
+var textarea = document.querySelector('textarea');
 
-$("#navBtnContact").click(function(){
-    $("html,body").animate( {scrollTop: $("#sectionFiveHome").offset().top }, 'slow'); 
-});
+textarea.addEventListener('keydown', autosize);
 
-$("#sectionOneBoxButton").click(function(){
-    $("html,body").animate( {scrollTop: $("#sectionTwoHome").offset().top }, 'slow'); 
-});
-
-
-});
+function autosize() {
+    var el = this;
+    setTimeout(function () {
+        el.style.cssText = 'height:auto; padding:0';
+        // for box-sizing other than "content-box" use:
+        // el.style.cssText = '-moz-box-sizing:content-box';
+        el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    }, 0);
+}
 
 function menu() {
     var x = document.getElementById("mainNav");
@@ -29,13 +56,13 @@ function menu() {
     }
 
     var y = document.getElementById("icon");
-    if(y.className === "icon"){
+    if (y.className === "icon") {
         y.className += " clicked";
         y.textContent = "X";
         y.style.fontFamily = "'Montserrat'";
     } else {
         y.className = "icon";
         y.textContent = "☰";
-        
+
     }
 }
