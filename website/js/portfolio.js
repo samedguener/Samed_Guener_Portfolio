@@ -5,12 +5,12 @@ $(document).ready(function () {
             scrollTop: $("#about").offset().top
         }, 'slow');
     });
+    
     $("#navBtnResume").click(function () {
         $("html,body").animate({
             scrollTop: $("#resume").offset().top
         }, 'slow');
     });
-
 
     $("#navBtnSkill").click(function () {
         $("html,body").animate({
