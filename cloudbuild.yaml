@@ -1,0 +1,3 @@
+steps:
+- name: 'ubuntu'
+  args: ['./CI/build_image.sh $PROJECT_ID $REPO_NAME $BRANCH_NAME $TAG_NAME']
