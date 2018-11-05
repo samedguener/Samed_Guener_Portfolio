@@ -26,3 +26,7 @@ echo "Building Docker image finished!"
 echo "Pushing Docker image into Google Container Registry .."
 docker push -t $TAG_NAME -t $SHORT_SHA
 echo "Pushing Docker image into Google Container Registry finished!"
+
+echo "Deploying into Kubernetes!"
+# TODO Do Kuberentes Deployment using HELM
+echo "Deployment into Kubernetes finished!"
