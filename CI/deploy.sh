@@ -5,7 +5,7 @@ BRANCH_NAME=$3
 TAG_NAME=$4
 SHORT_SHA=$5
 
-if [ $BRANCH_NAME!="master" ]
+if [ $BRANCH_NAME != "master" ]
 then
     echo "We are not in the master branch! Skipping deployment!"
     exit 0
@@ -13,7 +13,7 @@ fi
 
 if [ -z $TAG_NAME ]
 then
-    echo "No tag was provided! Skipping deployment!"
+    echo "No tag was provided! Skipping building deployment!"
     exit 0
 fi
 
@@ -26,4 +26,3 @@ echo "Building Docker image finished!"
 echo "Pushing Docker image into Google Container Registry .."
 docker push -t $TAG_NAME -t $SHORT_SHA
 echo "Pushing Docker image into Google Container Registry finished!"
-
