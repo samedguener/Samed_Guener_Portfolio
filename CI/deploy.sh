@@ -6,6 +6,8 @@ SHORT_SHA=$5
 CLOUDSDK_COMPUTE_ZONE=$6
 CLOUDSDK_CONTAINER_CLUSTER=$7
 
+ls
+
 if [ $BRANCH_NAME != "master" ]
 then
     echo "We are not in the master branch! Skipping deployment!"
