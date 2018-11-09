@@ -2,7 +2,9 @@
 PROJECT_ID=$1
 REPO_NAME=$2
 BRANCH_NAME=$3
-TAG_NAME=$4
+# Cloud Build doesn't support tags currently.
+#TAG_NAME=$4
+TAG_NAME=$(git tags -l --contains HEAD | grep -m1 "")
 SHORT_SHA=$5
 CLOUDSDK_COMPUTE_ZONE=$6
 CLOUDSDK_CONTAINER_CLUSTER=$7
