@@ -20,9 +20,8 @@ echo "Installing git .."
 apt-get install -y git 
 echo "Installing git .. finished!"
 
-# Cloud Build doesn't support tags currently.
+# Cloud Build doesn't support tags currently. Let's grep it by ourselves!
 #TAG_NAME=$4
-git init
 TAG_NAME=$(git tag -l --contains HEAD | grep -m1 "")
 
 if [ -z $TAG_NAME ]
