@@ -12,8 +12,12 @@ then
     exit 0
 fi
 
+echo "Updating repositories .."
+apt-get update -y
+echo "Updating repositories .. finished!"
+
 echo "Installing git .."
-apt-get install git-all -y
+apt-get install -y git-all 
 echo "Installing git .. finished!"
 
 # Cloud Build doesn't support tags currently.
