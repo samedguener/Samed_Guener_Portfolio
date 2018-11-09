@@ -6,8 +6,6 @@ SHORT_SHA=$5
 CLOUDSDK_COMPUTE_ZONE=$6
 CLOUDSDK_CONTAINER_CLUSTER=$7
 
-ls
-
 if [ $BRANCH_NAME != "master" ]
 then
     echo "We are not in the master branch! Skipping deployment!"
@@ -24,7 +22,7 @@ echo "Installing git .. finished!"
 
 # Cloud Build doesn't support tags currently.
 #TAG_NAME=$4
-GIT_DIR=./
+git init
 TAG_NAME=$(git tag -l --contains HEAD | grep -m1 "")
 
 if [ -z $TAG_NAME ]
