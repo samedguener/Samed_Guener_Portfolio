@@ -22,7 +22,7 @@ echo "Installing git .. finished!"
 
 # Cloud Build doesn't support tags currently.
 #TAG_NAME=$4
-TAG_NAME=$(git tags -l --contains HEAD | grep -m1 "")
+TAG_NAME=$(git tag -l --contains HEAD | grep -m1 "")
 
 if [ -z $TAG_NAME ]
 then
