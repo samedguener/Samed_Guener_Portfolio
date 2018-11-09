@@ -13,7 +13,7 @@ then
 fi
 
 echo "Installing git .."
-sudo apt install git-all -y
+apt-get install git-all -y
 echo "Installing git .. finished!"
 
 # Cloud Build doesn't support tags currently.
