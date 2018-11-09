@@ -12,6 +12,7 @@ then
     exit 0
 fi
 
+ls -l -a
 echo "Updating repositories .."
 apt-get update -y
 echo "Updating repositories .. finished!"
