@@ -18,14 +18,14 @@ apt-get update -y
 echo "Updating repositories .. finished!"
 
 echo "Installing Docker requirements .."
-apt-get install apt-transport-https ca-certificates curl software-properties-common
+apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 echo "Installing Docker requirements .. finished!"
 
 echo "Installing Docker .."
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-apt-get update
-apt-get install docker-ce
+apt-get update -y
+apt-get install -y docker-ce
 
 while (! docker stats --no-stream ); do
   # Docker takes a few seconds to initialize
