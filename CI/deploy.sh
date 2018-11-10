@@ -1,6 +1,6 @@
 # !/bin/bash 
 PROJECT_ID=$1
-REPO_NAME=${$2,,}
+REPO_NAME=$2
 BRANCH_NAME=$3
 # using SHORT_SHA as tag, since tags are currently not supported by Github GCB integration
 TAG_NAME=$4
@@ -35,14 +35,14 @@ done
 
 echo "Installing Docker .. finished!"
 
-echo "Building image $REPO_NAME:$TAG_NAME for $REPO_NAME!"
+echo "Building image ${REPO_NAME,,}:$TAG_NAME for $REPO_NAME!"
 
 echo "Building Docker image .."
-docker build -t gcr.io/$PROJECT_ID/$REPO_NAME:$TAG_NAME .
+docker build -t gcr.io/$PROJECT_ID/${REPO_NAME,,}:$TAG_NAME .
 echo "Building Docker image finished!"
 
 echo "Pushing Docker image into Google Container Registry .."
-docker push -t $TAG_NAME -t $SHORT_SHA
+docker push -t $TAG_NAME
 echo "Pushing Docker image into Google Container Registry .. finished!"
 
 echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
