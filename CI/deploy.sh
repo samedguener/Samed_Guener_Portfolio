@@ -60,9 +60,9 @@ function get_k8s_credentials () {
     echo "Installing gcloud .."
 
     echo "Download and untar gcloud non-interactive archive!"
-    mkdir ../gcloud && 
-    wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz -P ../gcloud &&
-    tar -xvf ../gcloud/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz
+    mkdir ./gcloud && 
+    wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz -P ./gcloud &&
+    tar -xvf ./gcloud/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz
     # we don't specify credentials, Cloud Build provides a service account
     
     if [ $? -eq 0 ]; then
@@ -73,7 +73,7 @@ function get_k8s_credentials () {
     fi  
 
     echo "Gathering Kubernetes Cluster Credentials .."
-    ../gcloud/google-cloud-sdk/bin/gcloud container clusters get-credentials --zone "$CLOUDSDK_COMPUTE_ZONE" "$CLOUDSDK_CONTAINER_CLUSTER"
+    ./gcloud/google-cloud-sdk/bin/gcloud container clusters get-credentials --zone "$CLOUDSDK_COMPUTE_ZONE" "$CLOUDSDK_CONTAINER_CLUSTER"
 
     if [ $? -eq 0 ]; then
         echo "Gathering Kubernetes Cluster Credentials .. finished!"
@@ -123,7 +123,7 @@ apt-get update -y
 echo "Updating repositories .. finished!"
 
 install_docker
-get_k8s_credentials
 build_push_docker_image
+get_k8s_credentials
 install_helm
 deploy_image
