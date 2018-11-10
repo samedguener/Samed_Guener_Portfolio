@@ -33,7 +33,11 @@ while (! docker stats --no-stream ); do
   sleep 1
 done
 
-echo "Installing Docker .. finished!"
+if [ $? -eq 0 ]; then
+    echo "Installing Docker .. finished!"
+else
+    echo "Installing Docker .. failed!"
+fi
 
 echo "Building image ${REPO_NAME,,}:$TAG_NAME for $REPO_NAME!"
 
@@ -42,8 +46,14 @@ docker build -t gcr.io/$PROJECT_ID/${REPO_NAME,,}:$TAG_NAME .
 echo "Building Docker image finished!"
 
 echo "Pushing Docker image into Google Container Registry .."
-docker push -t $TAG_NAME
+docker push gcr.io/$PROJECT_ID/${REPO_NAME,,}:$TAG_NAME
 echo "Pushing Docker image into Google Container Registry .. finished!"
+
+if [ $? -eq 0 ]; then
+    echo "Building image ${REPO_NAME,,}:$TAG_NAME for $REPO_NAME .. finished!"
+else
+    echo "Building image ${REPO_NAME,,}:$TAG_NAME for $REPO_NAME .. failed!"
+fi
 
 echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
 
@@ -61,4 +71,9 @@ echo "Initializing HELM .."
 helm init --upgrade
 echo "Initializing HELM .. finished!"
 
-echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
+if [ $? -eq 0 ]; then
+    echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
+else
+    echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. failed!"
+fi
+
