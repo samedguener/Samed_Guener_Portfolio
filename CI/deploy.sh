@@ -9,7 +9,7 @@ CLOUDSDK_CONTAINER_CLUSTER=$6
 
 function install_docker () {
     echo "Installing Docker requirements .."
-    apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+    apt-get install -y apt-transport-https ca-certificates curl software-properties-common wget
 
     if [ $? -eq 0 ]; then
         echo "Installing Docker requirements .. finished!"
