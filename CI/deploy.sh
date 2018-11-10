@@ -24,18 +24,18 @@ function install_docker () {
     apt-get update -y
     apt-get install -y docker-ce
 
-    while (! docker stats --no-stream ); do
-        # Docker takes a few seconds to initialize
-        echo "Waiting for Docker to launch..."
-        sleep 1
-    done
-
     if [ $? -eq 0 ]; then
         echo "Installing Docker .. finished!"
     else
         echo "Installing Docker .. failed!"
         exit 1
     fi
+
+    while (! docker stats --no-stream ); do
+        # Docker takes a few seconds to initialize
+        echo "Waiting for Docker to launch..."
+        sleep 1
+    done
 }
 
 function build_push_docker_image () {
@@ -43,11 +43,10 @@ function build_push_docker_image () {
 
     echo "Building Docker image .."
     docker build -t gcr.io/$PROJECT_ID/${REPO_NAME,,}:$TAG_NAME .
-    echo "Building Docker image finished!"
 
     echo "Pushing Docker image into Google Container Registry .."
     docker push gcr.io/$PROJECT_ID/${REPO_NAME,,}:$TAG_NAME
-    echo "Pushing Docker image into Google Container Registry .. finished!"
+   
 
     if [ $? -eq 0 ]; then
         echo "Building image ${REPO_NAME,,}:$TAG_NAME for $REPO_NAME .. finished!"
@@ -57,6 +56,22 @@ function build_push_docker_image () {
     fi
 }
 
+function install_gcloud () {
+    echo "Installing gcloud .."
+
+    echo "Download and untar gcloud non-interactive archive!"
+    wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz &&
+    cd .. && mkdir gcloud &&
+    tar -C ./gcloud -xvf google-cloud-sdk-224.0.0-linux-x86_64.tar.gz &&
+    ./gcloud/google-cloud-sdk/bin/gcloud init
+
+    if [ $? -eq 0 ]; then
+        echo "Installing gcloud .. finished!"
+    else
+        echo "Installing gcloud .. failed!"
+        exit 1
+    fi  
+}
 function get_k8s_credentials () {
     echo "Gathering Kubernetes Cluster Credentials .."
     gcloud container clusters get-credentials --zone "$CLOUDSDK_COMPUTE_ZONE" "$CLOUDSDK_CONTAINER_CLUSTER"
@@ -110,6 +125,7 @@ echo "Updating repositories .. finished!"
 
 install_docker
 build_push_docker_image
+install_gcloud
 get_k8s_credentials
 install_helm
 deploy_image
