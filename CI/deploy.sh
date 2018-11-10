@@ -60,14 +60,15 @@ function install_gcloud () {
     echo "Installing gcloud .."
 
     echo "Download and untar gcloud non-interactive archive!"
-    cd .. && mkdir gcloud && 
+    mkdir gcloud && 
     wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz &&
     tar -C ./gcloud -xvf google-cloud-sdk-224.0.0-linux-x86_64.tar.gz &&
+    # we don't specify credentials, Cloud Build provides a service account
     ./gcloud/google-cloud-sdk/install.sh
+    rm -rf gcloud
 
     if [ $? -eq 0 ]; then
         echo "Installing gcloud .. finished!"
-        cd $REPO_NAME
     else
         echo "Installing gcloud .. failed!"
         exit 1
