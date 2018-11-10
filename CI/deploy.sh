@@ -12,25 +12,6 @@ then
     exit 0
 fi
 
-ls -l -a
-echo "Updating repositories .."
-apt-get update -y
-echo "Updating repositories .. finished!"
-
-echo "Installing git .."
-apt-get install -y git 
-echo "Installing git .. finished!"
-
-# Cloud Build doesn't support tags currently. Let's grep it by ourselves!
-#TAG_NAME=$4
-TAG_NAME=$(git tag -l --contains HEAD | grep -m1 "")
-
-if [ -z $TAG_NAME ]
-then
-    echo "No tag was provided! Skipping building deployment!"
-    exit 0
-fi
-
 echo "Building image $REPO_NAME:$TAG_NAME for $REPO_NAME!"
 
 echo "Building Docker image .."
