@@ -63,7 +63,7 @@ function install_gcloud () {
     cd .. && mkdir gcloud && 
     wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-224.0.0-linux-x86_64.tar.gz &&
     tar -C ./gcloud -xvf google-cloud-sdk-224.0.0-linux-x86_64.tar.gz &&
-    ./gcloud/google-cloud-sdk/bin/gcloud init
+    ./gcloud/google-cloud-sdk/install.sh
 
     if [ $? -eq 0 ]; then
         echo "Installing gcloud .. finished!"
@@ -125,8 +125,8 @@ apt-get update -y
 echo "Updating repositories .. finished!"
 
 install_docker
-build_push_docker_image
 install_gcloud
+build_push_docker_image
 get_k8s_credentials
 install_helm
 deploy_image
