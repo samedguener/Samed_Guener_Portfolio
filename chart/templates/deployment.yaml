@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samed-guener-portfolio-deployment
+spec:
+  selector:
+    matchLabels:
+      app: samed-guener-portfolio
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: samed-guener-portfolio
+    spec:
+      containers:
+      - name: samed-guener-portfolio
+        image: gcr.io/projects-220919/samed_guener_portfolio:{{ .Values.version | replace "\"" "" }}
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 80

@@ -3,5 +3,5 @@ steps:
   args: ['bash', 'CI/deploy.sh', '${PROJECT_ID}', '${REPO_NAME}', '${BRANCH_NAME}', '${SHORT_SHA}', '${_CLOUDSDK_COMPUTE_ZONE}', '${_CLOUDSDK_CONTAINER_CLUSTER}']
 substitutions:
   # Sticking to this until Cloud Build Github integration support variable substitions
-  _CLOUDSDK_COMPUTE_ZONE: europe-west1-b
+  _CLOUDSDK_COMPUTE_ZONE: europe-west4-a
   _CLOUDSDK_CONTAINER_CLUSTER: kubernetes-cluster

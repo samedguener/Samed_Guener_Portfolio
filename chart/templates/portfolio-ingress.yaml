@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: samed-guener-portfolio-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.global-static-ip-name: kubernets-cluster-external-ip
+spec:
+  rules:
+  - host: *
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: samed-guener-portfolio-service
+          servicePort: 80

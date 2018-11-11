@@ -105,6 +105,10 @@ function deploy_image () {
 
     echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
 
+
+    "args": ["upgrade", "-i", "-f", "./deployment/nodeapp/values.yaml", "--set", "version=\"${SHORT_SHA}\"", "nodeapp", "./deployment/nodeapp"],
+
+
     if [ $? -eq 0 ]; then
         echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
     else
@@ -125,6 +129,4 @@ echo "Updating repositories .. finished!"
 
 install_docker
 build_push_docker_image
-get_k8s_credentials
-install_helm
 deploy_image
