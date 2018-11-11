@@ -4,10 +4,9 @@ metadata:
   name: samed-guener-portfolio-ingress
   annotations:
     kubernetes.io/ingress.class: traefik
-    kubernetes.io/ingress.global-static-ip-name: kubernets-cluster-external-ip
 spec:
   rules:
-  - host: *
+  - host: samedguener.de
     http:
       paths:
       - path: /
