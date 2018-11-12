@@ -107,7 +107,7 @@ function deploy_image () {
 
     echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
     helm package ./$CHART_FOLDER
-    helm upgrade --install ./$CHART_FOLDER-1.0.0.tgz --set version=$TAG_NAME
+    helm upgrade $CHART_NAME ./$CHART_FOLDER-1.0.0.tgz --install --set version=$TAG_NAME
 
     if [ $? -eq 0 ]; then
         echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
