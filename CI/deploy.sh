@@ -104,10 +104,8 @@ function deploy_image () {
     install_helm
 
     echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
-
-
-    "args": ["upgrade", "-i", "-f", "./deployment/nodeapp/values.yaml", "--set", "version=\"${SHORT_SHA}\"", "nodeapp", "./deployment/nodeapp"],
-
+    helm package ./chart
+    helm install ./chart-1.0.0.tgz -set version=$TAG_NAME --name $REPO_NAME
 
     if [ $? -eq 0 ]; then
         echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
