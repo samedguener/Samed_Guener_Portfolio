@@ -1,7 +1,7 @@
 # !/bin/bash 
 PROJECT_ID=$1
 REPO_NAME=$2
-CHART_NAME=$( echo ${REPO_NAME,,} | sed 's/\./-/g' )
+CHART_NAME=$( echo ${REPO_NAME,,} | sed 's/\_/-/g' )
 CHART_FOLDER=$CHART_NAME-chart
 BRANCH_NAME=$3
 # using SHORT_SHA as tag, since tags are currently not supported by Github GCB integration
