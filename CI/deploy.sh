@@ -105,7 +105,7 @@ function deploy_image () {
 
     echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
     helm package ./samed_guener_portfolio_chart
-    helm install ./samed_guener_portfolio_chart-1.0.0.tgz -set version=$TAG_NAME --name $REPO_NAME
+    helm install ./samed_guener_portfolio_chart-1.0.0.tgz --set version=$TAG_NAME --name $REPO_NAME
 
     if [ $? -eq 0 ]; then
         echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
