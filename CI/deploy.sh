@@ -1,6 +1,7 @@
 # !/bin/bash 
 PROJECT_ID=$1
 REPO_NAME=$2
+CHART_NAME= $( echo ${REPO_NAME,,} | sed 's/\./-/g' )
 BRANCH_NAME=$3
 # using SHORT_SHA as tag, since tags are currently not supported by Github GCB integration
 TAG_NAME=$4
@@ -104,8 +105,8 @@ function deploy_image () {
     install_helm
 
     echo "Deploying into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .."
-    helm package ./samed_guener_portfolio_chart
-    helm install ./samed_guener_portfolio_chart-1.0.0.tgz --set version=$TAG_NAME --name $REPO_NAME
+    helm package ./$CHART_NAME
+    helm install ./$CHART_NAME-1.0.0.tgz --set version=$TAG_NAME --name $CHART_NAME
 
     if [ $? -eq 0 ]; then
         echo "Deployment into Kubernetes cluster ($CLOUDSDK_CONTAINER_CLUSTER) .. finished!"
