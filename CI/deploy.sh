@@ -94,9 +94,9 @@ function install_helm () {
     helm init --upgrade
 
     if [ $? -eq 0 ]; then
-        echo "Initializing and initializing HELM .. finished!"
+        echo "Installing and initializing HELM .. finished!"
     else
-        echo "Initializing and initializing HELM .. failed!"
+        echo "Installing and initializing HELM .. failed!"
         exit 1
     fi
 }
@@ -122,6 +122,17 @@ then
     echo "We are not in the master branch! Skipping deployment!"
     exit 0
 fi
+
+echo "-------- Deployment Information --------"
+echo "Project: $PROJECT_ID"
+echo "Repository: $REPO_NAME"
+echo "Chart: $CHART_NAME"
+echo "Chart-Folder: $CHART_FOLDER"
+echo "Branch: $BRANCH_NAME"
+echo "Docker-Image-Tag: $TAG_NAME"
+echo "Compute-Zone: $CLOUDSDK_COMPUTE_ZONE"
+echo "Kubernetes-Cluster: $CLOUDSDK_CONTAINER_CLUSTER"
+echo "----------------------------------------"
 
 echo "Updating repositories .."
 apt-get update -y
