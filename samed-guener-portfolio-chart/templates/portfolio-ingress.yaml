@@ -14,3 +14,17 @@ spec:
         backend:
           serviceName: samed-guener-portfolio-service
           servicePort: 80
+  - host: samedguener.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: samed-guener-portfolio-service
+          servicePort: 80
+  - host: samedguener.de
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: samed-guener-portfolio-service
+          servicePort: 80
