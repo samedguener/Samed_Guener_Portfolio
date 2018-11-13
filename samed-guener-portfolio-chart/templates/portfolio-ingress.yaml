@@ -14,9 +14,7 @@ spec:
         backend:
           serviceName: samed-guener-portfolio-service
           servicePort: 80
-tls:
-- secretName: traefik-default-cert
-  hosts:
-  - buzzle.io
-
-  
+  tls:
+  - secretName: traefik-default-cert
+    hosts:
+    - buzzle.io
