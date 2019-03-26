@@ -1,8 +1,7 @@
 pipeline {
 
     environment {
-        registry = "registry.buzzle.io"
-        image = "samed_guener_portfolio"
+        image = "registry.buzzle.io/samed_guener_portfolio"
         registryCredential = 'buzzle_docker_registry'
     }
 
@@ -12,8 +11,11 @@ pipeline {
         stage('Building Docker Image') {
             steps {
                 script {
+                    def dockerHome = tool 'Docker'
+                    env.PATH = "${dockerHome}/bin:${env.PATH}"
+                    
                     echo "--- Building Docker Image ---"
-                    docker.build registry + image + ":$BUILD_NUMBER"
+                    docker.build image + ":$BUILD_NUMBER"
                 }
             }
         }
