@@ -1,9 +1,17 @@
 pipeline {
-    agent { label 'master' }
+
+    environment {
+        registry = "registry.buzzle.io"
+        registryCredential = 'buzzle_docker_registry'
+    }
+
+    agent any
+
     stages {
-        stage('build') {
+        stage('Building Docker Image') {
             steps {
-                echo "Hello World!"
+                echo "--- Building Docker Image ---"
+                docker.build registry + ":$BUILD_NUMBER"
             }
         }
     }
