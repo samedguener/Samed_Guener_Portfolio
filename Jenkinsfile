@@ -26,6 +26,7 @@ pipeline {
                     echo "--- Pushing Docker Image ---"
                     docker.withRegistry( 'https://registry.buzzle.io', registryCredential ) {
                         dockerImage.push()
+                        dockerImage.push("latest")
                     }
                 }
             }
