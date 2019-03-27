@@ -1,4 +1,6 @@
 
+def dockerImage
+
 pipeline {
 
     environment {
@@ -9,12 +11,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Build and Push Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     echo "--- Building Docker Image ---"
-                    def dockerImage = docker.build image + ":$BUILD_NUMBER"
-
+                    dockerImage = docker.build image + ":$BUILD_NUMBER"
+                }
+            }
+        } 
+        
+        stage('Push Docker Image') {
+            steps {
+                script {
                     echo "--- Pushing Docker Image ---"
                     docker.withRegistry( 'https://registry.buzzle.io', registryCredential ) {
                         dockerImage.push()
