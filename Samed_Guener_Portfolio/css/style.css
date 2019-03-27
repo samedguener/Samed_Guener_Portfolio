@@ -1,540 +1,388 @@
+/* Reset Default Settings*/
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, fieldset, legend, label, table, header, footer, nav, section { 
+	margin: 0; 
+	padding: 0;
+	border: 0;
+} 
+ol, ul { 
+	list-style: none; 
+}
+header, footer, nav, section, article, hgroup, figure {
+	display: block;	
+}
+legend {
+	display: none;
+}
+/************************/
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
-    font-family: 'Raleway';
-    src: url('/css/fonts/Raleway-Medium.ttf');
+ font-family: 'Raleway-Medium';
+ src: url('./font/Raleway-Medium.ttf');
 }
 
 body {
-    margin: 0;
+font-family: 'Raleway-Medium', sans-serif;
 }
 
-.sectionHeader {
-    height: 5%;
-    color: white;
-    padding-left: 17%;
-}
-
-.sectionHeaderBlock {
-    width: 40px;
-    height: 24px;
-    background-color: white;
-    display: block;
-    float: left;
-    margin-top: 4.5px;
-}
-
-.sectionHeaderText {
-    margin-left: 2%;
-    font-family: 'Raleway';
-    display: block;
-    float: left;
-    font-size: 1.8em;
-    font-weight: 900;
-    letter-spacing: 5px;
-}
-
-#home {
-    width: 100%;
-    height: 100vh;
-}
-
-#sectionOneBox {
-    position: absolute;
-    top: 47%;
-    left: 19%;
-    height: 300px;
-    color: #C8C5C0;
-    font-family: 'Raleway';
-    z-index: 1;
-}
-
-#sectionOneBoxName {
-    font-size: 3em;
-    font-weight: 900;
-}
-
-#sectionOneBoxDesc {
-    display: block;
-    margin-top: 15px;
-}
-
-#sectionOneBoxButton {
-    margin-top: 25px;
-    display: block;
-    width: 40%;
-    height: 35px;
-    text-align: center;
-    border: 1px solid #C8C5C0;
-    padding-top: 20px;
-    cursor: pointer;
-    color: #C8C5C0;
+a {
     text-decoration: none;
 }
 
-#sectionOneBoxButton:hover {
-    animation-name: sectionOneBoxButtonColorTransition;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+.nav {
+    overflow: hidden;
+    height: 4.5rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    line-height: 2.4rem;
 }
 
-@keyframes sectionOneBoxButtonColorTransition {
-    from {
-        color: #C8C5C0;
-        border: 1px solid #C8C5C0;
-    }
-    to {
-        color: #888888;
-        border: 1px solid #888888;
-    }
+.nav a {
+  float: right;
+  display: block;
+  color: rgb(145, 139, 132);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.15rem;
 }
 
-#about {
-    width: 100%;
-    background-color: #25232E;
-    padding-top: 5%;
+.nav a:not(:first-child) {display: none;}
+
+.nav a.mobileNavButton {
+  float: right;
+  display: block;
 }
 
-#sectionTwoHomeDescBox {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    margin-left: 30%;
-}
-
-#sectionTwoHomeDescImage {
+.nav.show a:not(:first-child) {
     display: block;
-    float: left;
-    height: 400px;
-    width: 300px;
-    margin-bottom: 10%;
-    margin-right: 5%;
 }
 
-#portfolioImage {
-    width: 100%;
-}
-
-#sectionTwoHomeDescBoxRight {
-    display: block;
-    float: left;
-    width: 420px;
-}
-
-#sectionTwoHomeDescHeader {
-    color: white;
-    font-family: 'Raleway';
-    font-size: 2em;
-    width: 100%;
-}
-
-#sectionTwoHomeDescContent {
-    color: white;
-    font-family: 'Raleway';
-    margin-top: 15px;
-    width: 100%;
-}
-
-#skill {
-    width: 100%;
-    background-color: #22202B;
-    padding-top: 5%;
-}
-
-#resume {
-    width: 100%;
-    background-color: #201E29;
-    padding-top: 5%;
-}
-
-#contact {
-    width: 100%;
-    background-color: #22202B;
-    padding-top: 5%;
-}
-
-.mainNav {
-    z-index: 1;
-    position: absolute;
-    margin-top: 25px;
-    width: 100%;
-}
-
-.mainNav>ul {
-    margin-left: 54%;
-    width: auto;
-    height: 24px;
-    float: left;
-}
-
-.mainNav>ul>li {
-    display: block;
-    float: left;
-    height: 100%;
-}
-
-.mainNav>ul>li>a {
-    display: block;
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1em;
-    margin-right: 18px;
-    height: 100%;
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(145, 139, 132);
+    margin: 6px 0;
+    transition: 0.4s;
     cursor: pointer;
-    color: #9D9D9D;
-    text-decoration: none;
 }
 
-.mainNav>ul>li>a:hover {
-    color: rgb(127, 168, 68);
+.mobileNavEnabled .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.mainNav>ul>li>a:hover::after {
-    content: ' ';
+.mobileNavEnabled .bar2 {opacity: 0;}
+
+.mobileNavEnabled .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100%;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start-header {
     display: block;
     position: relative;
-    background-color: rgb(127, 168, 68);
-    margin-top: 5px;
-    height: 0.15em;
-    width: 0%;
-    animation-name: afterNavBar;
-    animation-duration: 0.15s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    min-height: 35rem;
+    padding: 15rem 0;
 }
 
-@keyframes afterNavBar {
-    from {
+.keyword-text {
+    font-size: .75rem;
+    color: rgb(145, 139, 132);
+}
+
+.samed-guener-start-text {
+    color: rgb(145, 139, 132);
+    font-size: 2.95rem;
+    line-height: 2.95rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+.keyword-start-list > li {
+    color: rgb(145, 139, 132);
+}
+
+.about-section {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 5rem 0;
+    background-color: rgb(245, 245, 245);
+}
+
+.about-box {
+    width: 100%;
+    height: 100%;
+}
+
+.about-image  {
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+
+.about-text {
+    max-width: 25rem;
+}
+
+.about-text-header {
+    margin-bottom: 1rem;
+    font-size: 2em;
+}
+
+.about-text-content {
+    font-size: 1.2em;
+}
+
+#samed-guener-image {
+    width: 20rem;
+    height: auto;
+    margin-top: -30px;
+    margin-left: -20px;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.blog-section {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 5rem 0;
+    background-color: rgb(238, 238, 238);
+}
+
+.blog-description {
+    font-size: 1.25rem;
+    margin-top: 6rem;
+}
+
+.blog-description > p {
+    margin-bottom: 1rem;
+}
+
+.blog-description > p a {
+    color: rgb(145, 139, 132);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blog-post {
+    display: block;
+    width: 22rem; 
+    height: 10rem;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    padding-left: 0.3rem;
+    padding-top: 2.4rem;
+    border: 1px solid white;
+    background-color: black;
+}
+
+.blog-post-title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.3rem;
+}
+
+.blog-post-date {
+  display:inline-block;
+  font-style: italic;
+  font-weight: lighter;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.3rem;
+}
+
+.blog-post-description {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+  max-width: 20rem;
+}
+
+.section-header {
+    display: block;
+    float: left;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.contact-section {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 5rem 0;
+    background-color: rgb(230, 230, 230);
+}
+
+@media (min-width: 576px){
+    .container {
+       max-width: 540px;
+    }
+
+   .samed-guener-start-text {
+       font-size: 4rem;
+       line-height: 4rem;
+   }
+
+   .keyword-text {
+    font-size: 1rem;
+   }
+
+   .about-text-header {
+    font-size: 2em;
+   }
+
+   .about-text-content {
+    font-size: 1.2em;
+   }
+
+   .nav {
+    padding-right: 5rem;
+   }
+
+   .nav a.mobileNavButton {
+    display: none;
+   }
+
+   .nav a:not(:first-child) {
+    display: block;
+   }
+
+
+    .nav a:hover {
+     color: rgb(145, 139, 132);
+    }
+
+    .nav a:hover::after {
+     content: '';
+     display: block;
+     position: relative;
+     background-color: rgb(145, 139, 132);
+     height: 0.1em;
+     width: 0%;
+     animation-name: afterNav;
+     animation-duration: 0.15s;
+     animation-timing-function: ease-in;
+     animation-fill-mode: forwards;
+     -webkit-animation-fill-mode: forwards;
+    }
+
+    @keyframes afterNav {
+     from {
         width: 0%;
         left: 50%;
-    }
-    to {
+     }
+     to {
         width: 100%;
         left: 0%;
+     }
     }
 }
 
-#sectionThreeHomeSkillBox {
-    margin-left: 30%;
-    margin-top: 90px;
-    padding-bottom: 5%;
+@media (min-width: 768px) {
+.container {
+   max-width: 720px;
 }
 
-.skillBox {
-    float: left;
-    display: block;
-    margin-right: 7%;
-    margin-bottom: 5%;
-    height: 188px;
+.about-image  {
+    width: 18rem;
+    height: 18rem;
 }
 
-.skillDesc {
-    padding-top: 20px;
-    text-align: center;
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1em;
-    color: #9D9D9D;
-}
-
-#skillOne {
-    display: block;
-    background-color: #9D9D9D;
-    width: 150px;
-    height: 150px;
-}
-
-#skillTwo {
-    display: block;
-    background-color: #7FA844;
-    width: 150px;
-    height: 150px;
-}
-
-#skillThree {
-    display: block;
-    background-color: #C8C5C0;
-    background-image: url(../img/math.png);
-    background-size: 150px 150px;
-    width: 150px;
-    height: 150px;
-}
-
-#skillThreeImage {
-    width: 150px;
-    height: 150px;
-}
-
-.fa.fa-code {
-    color: #22202B;
-    font-size: 6em !important;
-    text-align: center;
-    margin-top: 17%;
-    margin-left: 15%;
-}
-
-.fa.fa-database {
-    color: #22202B;
-    font-size: 6em !important;
-    text-align: center;
-    margin-top: 17%;
-    margin-left: 23%;
-}
-
-#video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+#samed-guener-image {
+    width: 20rem;
     height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    background: url('../vid/coding.jpg') no-repeat;
-    background-size: cover;
-    transition: 1s opacity;
 }
 
-#navBarLogo {
-    height: 100%;
-    font-family: Montserrat;
-    font-size: 3em;
-    color: #7FA844;
-    margin-left: 12%;
-    float: left;
+.about-text {
+    float: right;
 }
 
-#navBarLogo::first-letter {
-    color: #9D9D9D;
+.section-header{
+    text-align: left;
+    padding-left: 8rem;
+   }
 }
 
-#sectionTwoHomeDescImage {
-    display: block;
-    float: left;
-    height: 400px;
-    width: 300px;
-    margin-bottom: 10%;
-    margin-right: 5%;
-}
+@media (min-width: 992px){
+ .container {
+    max-width: 960px;
+ }
 
-.icon {
-    color: #7FA844;
-    font-size: 3em;
-    display: none;
-    margin-right: 5%;
-}
+ .samed-guener-start-text {
+   font-size: 5rem;
+   line-height: 5rem;
+   letter-spacing: .15rem;
+ }
 
-@media (max-width: 500px) {
-    #resumeMiddleBar {
-        display: none;
-    }
-    .resumeLeftSideEntry {
-        margin-bottom: 0px !important;
-    }
-    .resumeRightSideEntry {
-        margin-bottom: 0px !important;
-    }
-    #resumeLeftSide {
-        margin-top: 0px !important;
-    }
-    #resumeRightSide {
-        margin-left: 0px !important;
-        margin-top: 15px !important;
-    }
-    #sectionFourResumeBox {
-        margin-top: 10px !important;
-    }
-    .icon {
-        color: #7FA844;
-        display: block;
-        float: right;
-        cursor: pointer;
-    }
-    #sectionTwoHomeDescImage {
-        display: block;
-        float: left;
-        height: 344px;
-        width: 209px;
-        margin-bottom: 10%;
-        margin-right: 5%;
-    }
-    #sectionTwoHomeDescBoxRight {
-        display: block;
-        float: left;
-        width: 220px;
-    }
-    .mainNav ul {
-        display: none;
-    }
-    .mainNav.responsive ul {
-        display: block;
-        height: 100%;
-    }
-    .mainNav.responsive>ul>li>a {
-        margin-top: 5px;
-        cursor: pointer;
-    }
-}
+ .keyword-text {
+    font-size: 1.25rem;
+ }
 
-#sectionFourResumeBox {
-    margin-left: 30%;
-    margin-top: 90px;
-    padding-bottom: 5%;
-}
+ .about-image  {
+    width: 26rem;
+    height: 26rem;
+ }
 
-#resumeRightSide {
-    height: 300px;
-    width: 250px;
-    float: left;
-    margin-left: 40px;
-    margin-top: 50px;
-}
-
-#resumeLeftSide {
-    height: 300px;
-    width: 250px;
-    float: left;
-    margin-right: 40px;
-}
-
-#resumeMiddleBar {
-    background-color: #9D9D9D;
-    height: 400px;
-    width: 1px;
-    float: left;
-}
-
-.resumeLeftSideEntry {
-    margin-bottom: 50px;
-}
-
-.resumeRightSideEntry {
-    margin-bottom: 50px;
-}
-
-.resumeEntryTitleRight {
-    padding-top: 20px;
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1.5em;
-    color: white;
-}
-
-.resumeEntryDescRight {
-    padding-top: 10px;
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1em;
-    color: #9D9D9D;
-}
-
-.resumeEntryTitleLeft {
-    padding-top: 20px;
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1.5em;
-    color: white;
-}
-
-.resumeEntryDescLeft {
-    padding-top: 10px;
-    font-family: 'Raleway';
-    font-weight: 800;
-    font-size: 1em;
-    color: #9D9D9D;
-}
-
-#sectionFourResumeBox {
-    margin-left: 30%;
-    margin-top: 90px;
-    padding-bottom: 5%;
-}
-
-#contactBox {
-    margin-left: 30%;
-    margin-top: 60px;
-    padding-bottom: 5%;
-}
-
-#contactEntryGooglePlus {
-    height: 128px;
-    width: 128px;
-    margin-right: 60px;
-    margin-bottom: 15px;
-}
-
-#contactEntryGithub {
-    width: 200px;
+ #samed-guener-image {
+    width: 28rem;
     height: auto;
-    margin-right: 60px;
-    margin-bottom: 40px;
+ }
+
+ .about-text {
+     padding-top: 3rem;
+ }
+
+ .about-text-header {
+     font-size: 2.35em;
+ }
+
+ .about-text-content {
+     font-size: 1.2em;
+ }
 }
 
-#contactEntryInstagram {
-    width: 125px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-#contactBox>a {
-    text-decoration: none;
-}
-
-#contactBoxEmail {
-    margin-left: 30%;
-    margin-top: 60px;
-    padding-bottom: 5%;
-    width: 200px;
-}
-
-.contactInputRequired {
-    color: red;
-    font-family: 'Raleway';
-}
-
-.contactInputName {
-    font-family: 'Raleway';
-    color: #9D9D9D;
-    font-weight: 800;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.contactInput {
-    font-family: 'Raleway';
-    background-color: #201E29;
-    color: #9D9D9D;
-    border: solid #C8C5C0 0.5px;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    width: 100%;
-    height: 30px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#contactMessage {
-    resize: vertical;
-    overflow: hidden;
-}
-
-#contactInputButton {
-    font-family: 'Raleway';
-    margin-top: 25px;
-    display: block;
-    width: 75px;
-    height: 35px;
-    text-align: center;
-    border: 1px solid #C8C5C0;
-    cursor: pointer;
-    background-color: #C8C5C0;
-    color: #201E29;
-    text-decoration: none;
-}
-
-#contactInputButton:hover {
-    background-color: #9D9D9D;
-    border: none;
+@media (min-width: 1200px){
+ .container {
+   max-width: 1140px;
+ }
 }
