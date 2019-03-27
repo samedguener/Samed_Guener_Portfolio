@@ -1,9 +1,9 @@
-window.onload = function() {
+/* window.onload = function() {
     // Load last three blogposts from rss-feed
     fetch('http://127.0.0.1:5500/rss.xml', { method : 'GET', headers : { "Content-Type": "application/xml"}})
     .then((res) => { 
         if(res.ok)
-         return res.text()
+            return res.text()
         
         return Promise.reject("Fetching of posts have failed!");
     })
@@ -38,7 +38,7 @@ window.onload = function() {
     })
     .catch((err) => { console.log(err)})
     
-}
+} */
 
 // Navigation for Mobile Devices
 function showNav(barButton) {
