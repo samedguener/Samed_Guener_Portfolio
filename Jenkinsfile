@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     echo "--- Pushing Docker Image ---"
-                    docker.withRegistry( 'registry.buzzle.io', registryCredential ) {
+                    docker.withRegistry( 'https://registry.buzzle.io', registryCredential ) {
                         dockerImage.push()
                     }
                 }
