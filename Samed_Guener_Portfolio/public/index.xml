@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Samed Güner Blog</title>
+    <link>https://blog.samedguener.com/</link>
+    <description>Recent content on Samed Güner Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Feb 2017 15:26:23 -0600</lastBuildDate>
+    
+	<atom:link href="https://blog.samedguener.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome to Hugo!</title>
+      <link>https://blog.samedguener.com/posts/my-first-post.1/</link>
+      <pubDate>Mon, 20 Feb 2017 15:26:23 -0600</pubDate>
+      
+      <guid>https://blog.samedguener.com/posts/my-first-post.1/</guid>
+      <description>You’ll find this post in your content/posts directory.
+To add new posts, simply add a file in the content/posts directory that follows the convention name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea of how it works.
+Hugo also offers powerful support for code snippets:
+package main import &amp;quot;fmt&amp;quot; func print_hi(name string) { fmt.Println(&amp;quot;Hi, &amp;quot;, name) } func main() { print_hi(&amp;quot;Tom&amp;quot;) } //=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Hugo!</title>
+      <link>https://blog.samedguener.com/posts/my-first-post.2/</link>
+      <pubDate>Mon, 20 Feb 2017 15:26:23 -0600</pubDate>
+      
+      <guid>https://blog.samedguener.com/posts/my-first-post.2/</guid>
+      <description>You’ll find this post in your content/posts directory.
+To add new posts, simply add a file in the content/posts directory that follows the convention name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea of how it works.
+Hugo also offers powerful support for code snippets:
+package main import &amp;quot;fmt&amp;quot; func print_hi(name string) { fmt.Println(&amp;quot;Hi, &amp;quot;, name) } func main() { print_hi(&amp;quot;Tom&amp;quot;) } //=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Hugo!</title>
+      <link>https://blog.samedguener.com/posts/my-first-post/</link>
+      <pubDate>Mon, 20 Feb 2017 15:26:23 -0600</pubDate>
+      
+      <guid>https://blog.samedguener.com/posts/my-first-post/</guid>
+      <description>You’ll find this post in your content/posts directory.
+To add new posts, simply add a file in the content/posts directory that follows the convention name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea of how it works.
+Hugo also offers powerful support for code snippets:
+package main import &amp;quot;fmt&amp;quot; func print_hi(name string) { fmt.Println(&amp;quot;Hi, &amp;quot;, name) } func main() { print_hi(&amp;quot;Tom&amp;quot;) } //=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.</description>
+    </item>
+    
+  </channel>
+</rss>
