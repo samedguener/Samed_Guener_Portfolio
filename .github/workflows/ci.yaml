@@ -1,0 +1,17 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy-job:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to S3
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      uses: actions/aws
+      run: |
+        aws s3 sync . s3://samedguener.com/
