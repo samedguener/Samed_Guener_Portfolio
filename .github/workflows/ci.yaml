@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+
 jobs:
   deploy-job:
     name: Deploy
@@ -15,4 +16,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       with:
         entrypoint: /bin/sh
-        args: -c "aws s3 sync . s3://samedguener.com/"
+        args: -c "-"
