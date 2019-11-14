@@ -9,10 +9,26 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to S3
-      uses: actions/aws/cli@master
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - uses: actions/checkout@master
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2.2.2
       with:
-        args: s3 sync . s3://samedguener.com/
+        hugo-version: '0.58.3'
+    - name: Build website
+      run: hugo --minify
+    - name: Setup Google Cloud
+      uses: actions/gcloud/auth@master
+      env:
+        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
+    - name: Upload files to samedguener.com
+      uses: docker://gcr.io/cloud-builders/gsutil
+      with:
+        args: -m cp -r public/* gs://samedguener.com/
+      env:
+        CLOUDSDK_CORE_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT_ID }}
+    - name: Upload files to samedguener.de
+      uses: docker://gcr.io/cloud-builders/gsutil
+      with:
+        args: -m cp -r public/* gs://samedguener.de/
+      env:
+        CLOUDSDK_CORE_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT_ID }}
