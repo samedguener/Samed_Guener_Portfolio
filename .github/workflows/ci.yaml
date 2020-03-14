@@ -17,18 +17,13 @@ jobs:
     - name: Build website
       run: hugo --minify
     - name: Setup Google Cloud
-      uses: actions/gcloud/auth@master
-      env:
-        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@0.1.2
+      with:
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+    - name: gcloud Set up
+      run: gcloud config set project ${{ secrets.GOOGLE_CLOUD_PROJECT_ID }}
     - name: Upload files to samedguener.com
-      uses: docker://gcr.io/cloud-builders/gsutil
-      with:
-        args: -m cp -r public/* gs://samedguener.com/
-      env:
-        CLOUDSDK_CORE_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT_ID }}
+      run: gsutil -m cp -r public/* gs://samedguener.com/
     - name: Upload files to samedguener.de
-      uses: docker://gcr.io/cloud-builders/gsutil
-      with:
-        args: -m cp -r public/* gs://samedguener.de/
-      env:
-        CLOUDSDK_CORE_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT_ID }}
+      run: -m cp -r public/* gs://samedguener.de/
