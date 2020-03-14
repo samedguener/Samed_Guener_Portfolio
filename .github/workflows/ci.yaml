@@ -26,4 +26,4 @@ jobs:
     - name: Upload files to samedguener.com
       run: gsutil -m cp -r public/* gs://samedguener.com/
     - name: Upload files to samedguener.de
-      run: -m cp -r public/* gs://samedguener.de/
+      run: gsutil -m cp -r public/* gs://samedguener.de/
