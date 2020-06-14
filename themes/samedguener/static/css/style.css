@@ -97,8 +97,8 @@ a {
 .start-header {
     display: block;
     position: relative;
-    min-height: 35rem;
-    padding: 15rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .keyword-text {
@@ -132,7 +132,6 @@ a {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 35rem;
     padding: 5rem 0;
     background-color: rgb(245, 245, 245);
 }
