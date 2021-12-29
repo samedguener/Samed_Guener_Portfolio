@@ -12,7 +12,7 @@ function showNav(barButton) {
 
 window.onload = () => {
     ageElement = document.getElementById("age")
-    ageElement.innerHTML = calculateYearsPastByFrom(1996) + " years"
+    ageElement.innerHTML = calculateYearsPastByFrom(1996) + " years "
 }
 
 function calculateYearsPastByFrom(startYear) {
