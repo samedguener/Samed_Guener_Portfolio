@@ -377,6 +377,15 @@ a {
  .about-text-content {
      font-size: 1.2em;
  }
+ .about-container {
+     padding: 0 25rem;
+ }
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 1200px){
