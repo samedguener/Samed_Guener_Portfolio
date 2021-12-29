@@ -8,3 +8,13 @@ function showNav(barButton) {
     }
     barButton.classList.toggle("mobileNavEnabled");
 }
+
+
+window.onload = () => {
+    ageElement = document.getElementById("age")
+    ageElement.innerHTML = calculateYearsPastByFrom(1996) + " years "
+}
+
+function calculateYearsPastByFrom(startYear) {
+    return (new Date().getFullYear() - startYear)
+}
