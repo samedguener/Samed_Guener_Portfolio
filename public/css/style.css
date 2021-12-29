@@ -97,8 +97,8 @@ a {
 .start-header {
     display: block;
     position: relative;
-    min-height: 35rem;
-    padding: 15rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .keyword-text {
@@ -131,9 +131,8 @@ a {
     display: block;
     position: relative;
     width: 100%;
-    height: auto;
-    min-height: 35rem;
-    padding: 5rem 0;
+    height: 800px;
+    padding: 7rem 0;
     background-color: rgb(245, 245, 245);
 }
 
@@ -165,10 +164,9 @@ a {
 }
 
 #samed-guener-image {
-    width: 20rem;
+    width: 21rem;
     height: auto;
-    margin-top: -30px;
-    margin-left: -20px;
+    margin-left: -25px;
 }
 
 .display-inline-block {
@@ -329,7 +327,7 @@ a {
 }
 
 #samed-guener-image {
-    width: 20rem;
+    width: 21rem;
     height: auto;
 }
 
@@ -364,7 +362,7 @@ a {
  }
 
  #samed-guener-image {
-    width: 28rem;
+    width: 29rem;
     height: auto;
  }
 
@@ -379,6 +377,15 @@ a {
  .about-text-content {
      font-size: 1.2em;
  }
+ .about-container {
+     padding: 0 25rem;
+ }
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 1200px){
